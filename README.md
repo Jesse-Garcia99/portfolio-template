@@ -108,8 +108,8 @@ npm run pages:deploy
 Free and fine for a static portfolio, but there is no database, no serverless function, and no AI binding if you want one later.
 
 1. Push this repo to GitHub.
-2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
-3. The included `.github/workflows/github-pages.yml` handles the rest. Push to `main` to deploy.
+2. Open the **Actions** tab, pick **Deploy to GitHub Pages**, and press **Run workflow**. It enables Pages for the repo on that first run, so there is nothing to set up beforehand.
+3. To deploy on every push instead of manually, uncomment the `push:` trigger at the top of `.github/workflows/github-pages.yml`.
 
 The workflow sets `BASE_PATH` to `/<repo>` because a project site is served from `https://<user>.github.io/<repo>`. If you use a custom domain or name the repo `<user>.github.io`, the site serves from the root: delete the `BASE_PATH` line from the workflow.
 
