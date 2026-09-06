@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "你的名字",
+    "description": "用一句话说明你是谁、你做什么。"
+  },
+  "ui": {
+    "skipToContent": "跳到主要内容",
+    "homeAria": "你的名字",
+    "navAria": "主导航",
+    "socialAria": "社交链接",
+    "tickerAria": "我常用的工具",
+    "skillsAria": "我做什么的演示",
+    "langLabel": "语言",
+    "nav": {
+      "work": "经历",
+      "whatIDo": "我做什么",
+      "about": "关于"
+    },
+    "sayHello": "打个招呼",
+    "sayHelloDot": "打个招呼。",
+    "heroAria": "你好，我是你的名字。我做设计，也写代码。",
+    "heroTitle": [
+      "你好，",
+      "我是你的名字。",
+      "做设计，也写代码。"
+    ],
+    "jumpAria": "跳到我做什么",
+    "badge": [
+      "设计师",
+      "与开发者"
+    ],
+    "rail": [
+      "设计",
+      "代码",
+      "数据"
+    ],
+    "workEyebrow": "工作经历",
+    "workHeading": [
+      "几段工作，",
+      "以及我做的事。"
+    ],
+    "skillsEyebrow": "我做什么",
+    "skillsHeading": [
+      "大致分了几类。",
+      "点开看细节。"
+    ],
+    "aboutIntro": "用一小段介绍你的背景，以及你是怎么走到这一步的。",
+    "languageNote": "写一门语言或一句自我介绍",
+    "contactPrompt": [
+      "手头的项目，",
+      "也许我能搭把手？"
+    ],
+    "footerTag": "设计师与开发者",
+    "resume": "简历"
+  }
+}

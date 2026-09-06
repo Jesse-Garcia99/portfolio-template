@@ -1,0 +1,27 @@
+name: Build verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: "--max-old-space-size=4096"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22.0"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build the static site
+        run: npm run build
+      - name: Verify types and SEO
+        run: |
+          npm run lint
+          npm run audit:seo

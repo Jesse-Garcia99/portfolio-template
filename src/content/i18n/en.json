@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Your Name",
+    "description": "One sentence about who you are and what you make."
+  },
+  "ui": {
+    "skipToContent": "Skip to content",
+    "homeAria": "Your Name",
+    "navAria": "Primary navigation",
+    "socialAria": "Social links",
+    "tickerAria": "Tools I work with",
+    "skillsAria": "Skill demonstrations",
+    "langLabel": "Language",
+    "nav": {
+      "work": "Work",
+      "whatIDo": "What I do",
+      "about": "About"
+    },
+    "sayHello": "Say hello",
+    "sayHelloDot": "Say hello.",
+    "heroAria": "Hi, I'm Your Name. I design and build for the web.",
+    "heroTitle": [
+      "HI, I'M",
+      "YOUR NAME.",
+      "I DESIGN + BUILD."
+    ],
+    "jumpAria": "Jump to what I do",
+    "badge": [
+      "Designer",
+      "& developer"
+    ],
+    "rail": [
+      "DESIGN",
+      "CODE",
+      "DATA"
+    ],
+    "workEyebrow": "Where I've worked",
+    "workHeading": [
+      "A few jobs, and",
+      "what I did in them."
+    ],
+    "skillsEyebrow": "What I do",
+    "skillsHeading": [
+      "Grouped roughly.",
+      "Tap through for detail."
+    ],
+    "aboutIntro": "A short paragraph about your background and how you got here.",
+    "languageNote": "Add a language or a personal note",
+    "contactPrompt": [
+      "Think I could help with",
+      "something you're working on?"
+    ],
+    "footerTag": "Designer & developer",
+    "resume": "Résumé"
+  }
+}

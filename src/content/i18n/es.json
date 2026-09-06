@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Tu Nombre",
+    "description": "Una frase sobre quién eres y qué haces."
+  },
+  "ui": {
+    "skipToContent": "Saltar al contenido",
+    "homeAria": "Tu Nombre",
+    "navAria": "Navegación principal",
+    "socialAria": "Redes",
+    "tickerAria": "Herramientas con las que trabajo",
+    "skillsAria": "Demostraciones de lo que hago",
+    "langLabel": "Idioma",
+    "nav": {
+      "work": "Experiencia",
+      "whatIDo": "Qué hago",
+      "about": "Sobre mí"
+    },
+    "sayHello": "Hablemos",
+    "sayHelloDot": "Hablemos.",
+    "heroAria": "Hola, soy Tu Nombre. Diseño y programo.",
+    "heroTitle": [
+      "HOLA,",
+      "SOY TU NOMBRE.",
+      "DISEÑO + PROGRAMO."
+    ],
+    "jumpAria": "Ir a qué hago",
+    "badge": [
+      "Diseñador",
+      "y programador"
+    ],
+    "rail": [
+      "DISEÑO",
+      "CÓDIGO",
+      "DATOS"
+    ],
+    "workEyebrow": "Dónde he trabajado",
+    "workHeading": [
+      "Algunos trabajos, y",
+      "lo que hice en ellos."
+    ],
+    "skillsEyebrow": "Qué hago",
+    "skillsHeading": [
+      "Agrupado a grandes rasgos.",
+      "Toca para ver el detalle."
+    ],
+    "aboutIntro": "Un párrafo breve sobre tu trayectoria y cómo llegaste hasta aquí.",
+    "languageNote": "Añade un idioma o una nota personal",
+    "contactPrompt": [
+      "¿Crees que puedo ayudarte",
+      "con algo en lo que trabajas?"
+    ],
+    "footerTag": "Diseñador y programador",
+    "resume": "Currículum"
+  }
+}

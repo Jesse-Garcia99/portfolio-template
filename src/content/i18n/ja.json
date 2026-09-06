@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "あなたの名前",
+    "description": "あなたが何者で、何をつくっているかを一文で。"
+  },
+  "ui": {
+    "skipToContent": "本文へスキップ",
+    "homeAria": "あなたの名前",
+    "navAria": "メインナビゲーション",
+    "socialAria": "SNS リンク",
+    "tickerAria": "使っているツール",
+    "skillsAria": "できることの一覧",
+    "langLabel": "言語",
+    "nav": {
+      "work": "経歴",
+      "whatIDo": "できること",
+      "about": "プロフィール"
+    },
+    "sayHello": "ご連絡ください",
+    "sayHelloDot": "ご連絡ください。",
+    "heroAria": "はじめまして。デザインして、つくります。",
+    "heroTitle": [
+      "はじめまして。",
+      "あなたの名前です。",
+      "デザインして、つくります。"
+    ],
+    "jumpAria": "できることへ移動",
+    "badge": [
+      "デザイナー",
+      "兼 開発者"
+    ],
+    "rail": [
+      "デザイン",
+      "コード",
+      "データ"
+    ],
+    "workEyebrow": "これまでの仕事",
+    "workHeading": [
+      "これまでに関わった",
+      "仕事のこと。"
+    ],
+    "skillsEyebrow": "できること",
+    "skillsHeading": [
+      "だいたいの分類です。",
+      "タップすると詳細が出ます。"
+    ],
+    "aboutIntro": "これまでの経歴と、いまに至るまでを短くまとめた段落。",
+    "languageNote": "言語や自己紹介を一言",
+    "contactPrompt": [
+      "取り組んでいることで、",
+      "力になれそうでしょうか？"
+    ],
+    "footerTag": "デザイナー兼開発者",
+    "resume": "履歴書"
+  }
+}

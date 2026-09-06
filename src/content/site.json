@@ -1,0 +1,55 @@
+{
+  "title": "Your Name",
+  "description": "One sentence about who you are and what you make.",
+  "siteUrl": "https://example.com",
+  "socialImage": "/social-card.svg",
+  "favicon": "/favicon.svg",
+  "navigation": [
+    {
+      "label": "Work",
+      "url": "/#work"
+    },
+    {
+      "label": "What I do",
+      "url": "/#skills"
+    },
+    {
+      "label": "About",
+      "url": "/#about"
+    }
+  ],
+  "contact": {
+    "phone": "",
+    "phoneUrl": "",
+    "email": "you@example.com",
+    "emailUrl": "mailto:you@example.com",
+    "address": ""
+  },
+  "actions": {
+    "donate": "",
+    "newsletter": ""
+  },
+  "localBusiness": {
+    "enabled": false,
+    "name": "",
+    "telephone": "",
+    "email": "",
+    "streetAddress": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "postalCode": "",
+    "addressCountry": ""
+  },
+  "owner": "Your Name",
+  "social": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/your-handle/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-handle"
+    }
+  ],
+  "resumeUrl": ""
+}

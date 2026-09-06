@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "당신의 이름",
+    "description": "당신이 누구이고 무엇을 만드는지 한 문장으로."
+  },
+  "ui": {
+    "skipToContent": "본문으로 건너뛰기",
+    "homeAria": "당신의 이름",
+    "navAria": "주요 내비게이션",
+    "socialAria": "소셜 링크",
+    "tickerAria": "사용하는 도구",
+    "skillsAria": "하는 일 데모",
+    "langLabel": "언어",
+    "nav": {
+      "work": "경력",
+      "whatIDo": "하는 일",
+      "about": "소개"
+    },
+    "sayHello": "인사하기",
+    "sayHelloDot": "인사 남기기.",
+    "heroAria": "안녕하세요, 당신의 이름입니다. 디자인하고 만듭니다.",
+    "heroTitle": [
+      "안녕하세요,",
+      "당신의 이름입니다.",
+      "디자인하고 만듭니다."
+    ],
+    "jumpAria": "하는 일로 이동",
+    "badge": [
+      "디자이너",
+      "겸 개발자"
+    ],
+    "rail": [
+      "디자인",
+      "코드",
+      "데이터"
+    ],
+    "workEyebrow": "일했던 곳",
+    "workHeading": [
+      "몇 군데서 일했고,",
+      "거기서 한 일들."
+    ],
+    "skillsEyebrow": "하는 일",
+    "skillsHeading": [
+      "대략 묶어봤습니다.",
+      "눌러서 자세히 보세요."
+    ],
+    "aboutIntro": "당신의 배경과 지금에 이르기까지를 짧게 소개하는 문단.",
+    "languageNote": "언어나 짧은 소개 한 줄",
+    "contactPrompt": [
+      "진행 중인 일에",
+      "제가 도움이 될까요?"
+    ],
+    "footerTag": "디자이너 겸 개발자",
+    "resume": "이력서"
+  }
+}

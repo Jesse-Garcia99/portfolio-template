@@ -1,0 +1,65 @@
+{
+  "availability": "Open to new work",
+  "heroLead": "One or two sentences on what you build and who you build it for. Keep it plain.",
+  "manifestoTitle": "A short line about how you work.",
+  "manifestoBody": "A paragraph with more detail. What stays constant across your projects, and what you care about in the result.",
+  "experience": [
+    {
+      "period": "2024 - Now",
+      "role": "Your Role",
+      "company": "Company",
+      "summary": "What you actually did there, in one plain sentence."
+    },
+    {
+      "period": "2022 - 2024",
+      "role": "Earlier Role",
+      "company": "Earlier Company",
+      "summary": "What you actually did there, in one plain sentence."
+    }
+  ],
+  "skills": [
+    {
+      "id": "code",
+      "label": "Code",
+      "statement": "One line on how you write software.",
+      "tools": "Language · Language · Language"
+    },
+    {
+      "id": "build",
+      "label": "Build",
+      "statement": "One line on how you take things to production.",
+      "tools": "Framework · Framework · API"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "statement": "One line on how you work with data.",
+      "tools": "Database · ETL · Dashboards"
+    },
+    {
+      "id": "ship",
+      "label": "Ship",
+      "statement": "One line on how you deploy and operate.",
+      "tools": "Git · CI/CD · Hosting"
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "statement": "One line on where you use models.",
+      "tools": "APIs · RAG · Agents"
+    },
+    {
+      "id": "human",
+      "label": "Human",
+      "statement": "One line on the human side of your work.",
+      "tools": "Research · Writing · Facilitation"
+    }
+  ],
+  "education": [
+    {
+      "school": "University Name",
+      "degree": "Your Degree",
+      "year": "2024"
+    }
+  ]
+}

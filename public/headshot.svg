@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 560" width="440" height="560" role="img" aria-label="Portrait placeholder">
+  <rect width="440" height="560" fill="#d9dbe0"/>
+  <circle cx="220" cy="215" r="88" fill="#b6b9c2"/>
+  <path d="M60 560c0-97 71.6-166 160-166s160 69 160 166z" fill="#b6b9c2"/>
+  <text x="220" y="520" fill="#6c7079" font-family="system-ui, sans-serif" font-size="22" font-weight="600" text-anchor="middle">Replace with your photo</text>
+  <text x="220" y="546" fill="#8b8f98" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle">public/headshot.svg</text>
+</svg>
