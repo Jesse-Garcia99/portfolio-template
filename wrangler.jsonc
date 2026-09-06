@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
+  // The Cloudflare Pages project name. This is the single source of truth:
+  // the deploy workflow reads it from here and creates the project on its
+  // first run, so you do not have to make one in the dashboard first.
   "name": "my-portfolio",
   "pages_build_output_dir": "./out",
   "compatibility_date": "2026-09-06"

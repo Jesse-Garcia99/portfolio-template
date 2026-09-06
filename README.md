@@ -50,24 +50,58 @@ npm run audit:seo    # metadata, headings, alt text, source maps
 
 Recommended because the same project can later add D1, KV, R2, Workers AI, and Workers functions without moving hosts or changing your build. Free tier, global CDN, unlimited bandwidth.
 
-1. Push this repo to GitHub.
-2. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**, then pick the repo.
-3. Set the build settings:
-   - Framework preset: **None**
-   - Build command: `npm run build`
-   - Build output directory: `out`
-4. Add one environment variable under **Settings → Variables**: `NODE_VERSION` = `22.22.0`.
-5. Deploy. Every push to `main` rebuilds automatically.
-6. **Custom domain → Set up a domain** to attach your own, then update `siteUrl` in `src/content/site.json` to match.
+You do not create anything in the dashboard. Save two secrets and the included workflow provisions the Pages project on its first run, then deploys on every push to `main`.
 
-Prefer the CLI:
+**1. Create an API token**
+
+Go to [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens) → **Create Token** → **Create Custom Token**, and grant exactly this:
+
+| Type | Resource | Permission |
+| --- | --- | --- |
+| Account | Cloudflare Pages | **Edit** |
+
+That single permission is all the workflow needs: `Edit` covers both creating the project and uploading deployments. Do not use a Global API Key, and do not add permissions you are not using.
+
+Two optional extras, only if you want them:
+
+| Type | Resource | Permission | Needed for |
+| --- | --- | --- | --- |
+| Zone | DNS | Edit | Attaching a custom domain from the CLI instead of the dashboard |
+| Account | Workers R2 Storage / D1 | Edit | Later, if you add storage or a database to the same project |
+
+Under **Account Resources**, scope the token to the one account you are deploying into.
+
+**2. Find your account ID**
+
+In the Cloudflare dashboard, open **Workers & Pages**. The Account ID is in the right sidebar, or it is the hex string in the dashboard URL after `dash.cloudflare.com/`.
+
+**3. Save both as GitHub repository secrets**
+
+In your repo: **Settings → Secrets and variables → Actions → New repository secret**.
+
+| Secret name | Value |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | The token from step 1 |
+| `CLOUDFLARE_ACCOUNT_ID` | The account ID from step 2 |
+
+**4. Set your project name and push**
+
+The Pages project is named after `name` in `wrangler.jsonc` (default: `my-portfolio`). Change it there, commit, and push to `main`. The workflow creates the project if it does not exist, builds, and deploys.
+
+Until both secrets are set, the deploy workflow skips itself and logs a notice instead of failing, so the repo stays green if you deploy elsewhere.
+
+**5. Custom domain**
+
+Attach it under **Workers & Pages → your project → Custom domains**, then set `siteUrl` in `src/content/site.json` to match.
+
+Deploying by hand instead:
 
 ```bash
+export CLOUDFLARE_API_TOKEN=...      # same token as above
+export CLOUDFLARE_ACCOUNT_ID=...
 npx wrangler pages project create my-portfolio --production-branch main
 npm run pages:deploy
 ```
-
-`wrangler.jsonc` sets the project name and output directory. Change `name` there if you use a different project name.
 
 ### GitHub Pages
 

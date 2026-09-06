@@ -1,0 +1,75 @@
+# Provisions the Cloudflare Pages project on first run, then deploys on every
+# push. Does nothing until CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are
+# saved as repository secrets, so the template stays green for people who
+# deploy somewhere else.
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      NODE_OPTIONS: "--max-old-space-size=4096"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for Cloudflare credentials
+        id: guard
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID is not set. Skipping deploy. See README > Deploy > Cloudflare Pages."
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.ready == 'true'
+        with:
+          node-version: "22.22.0"
+          cache: "npm"
+
+      - name: Install dependencies
+        if: steps.guard.outputs.ready == 'true'
+        run: npm ci
+
+      # wrangler.jsonc is the single source of truth for the project name.
+      # It allows // comments, so strip those before parsing.
+      - name: Read project name
+        id: project
+        if: steps.guard.outputs.ready == 'true'
+        run: |
+          NAME=$(node -p "JSON.parse(require('fs').readFileSync('wrangler.jsonc','utf8').replace(/^\s*\/\/.*$/gm,'')).name")
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "Cloudflare Pages project: $NAME"
+
+      # ponytail: `project create` errors when the project exists, so check the
+      # list first rather than parsing the error. One extra API call per run.
+      - name: Provision the Pages project
+        if: steps.guard.outputs.ready == 'true'
+        run: |
+          NAME='${{ steps.project.outputs.name }}'
+          if npx wrangler pages project list | grep -qE "(^|[[:space:]])${NAME}([[:space:]]|$)"; then
+            echo "Project '$NAME' already exists, skipping creation."
+          else
+            echo "Creating Pages project '$NAME'."
+            npx wrangler pages project create "$NAME" --production-branch main
+          fi
+
+      - name: Build
+        if: steps.guard.outputs.ready == 'true'
+        run: npm run build
+
+      - name: Deploy
+        if: steps.guard.outputs.ready == 'true'
+        run: npx wrangler pages deploy out --project-name '${{ steps.project.outputs.name }}' --branch main
