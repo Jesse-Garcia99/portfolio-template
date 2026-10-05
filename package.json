@@ -10,7 +10,8 @@
     "lint": "tsc --noEmit",
     "audit:seo": "node scripts/audit-seo.mjs",
     "pages:dev": "npm run build && wrangler pages dev out",
-    "pages:deploy": "npm run build && wrangler pages deploy out"
+    "pages:deploy": "npm run build && wrangler pages deploy out",
+    "audit:a11y": "node scripts/audit-a11y.mjs"
   },
   "engines": {
     "node": ">=22.22.0"

@@ -37,7 +37,6 @@ export default function TinaForm({ form }: TinaFormProps) {
     const raw = new FormData(e.currentTarget);
     const data = Object.fromEntries(raw.entries());
 
-    // Client-side validation
     const newErrors: Record<string, string> = {};
     formData.fields.forEach((field) => {
       if (field.required && !data[field.name]) {

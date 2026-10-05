@@ -178,7 +178,6 @@ p { text-wrap: pretty; }
 @keyframes node-pulse { 50% { background: var(--orange); box-shadow: 0 0 0 12px oklch(0.68 0.235 35 / 0); transform: scale(1.15); } }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
-/* ── Laptop ─────────────────────────────────────────────────────────────── */
 @media (max-width: 1200px) {
   .hero { grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr); }
   .manifesto { gap: clamp(28px, 6vw, 90px); grid-template-columns: 72px 1fr; }
@@ -188,7 +187,6 @@ p { text-wrap: pretty; }
   .skill-system { gap: 20px; }
 }
 
-/* ── Tablet ─────────────────────────────────────────────────────────────── */
 @media (max-width: 940px) {
   .hero { gap: 20px; grid-template-columns: 1fr minmax(280px,.58fr); }
   .hero h1 { font-size: clamp(3.9rem, 9vw, 5.4rem); }
@@ -202,7 +200,6 @@ p { text-wrap: pretty; }
   .contact-section .shell { align-items:flex-start; flex-direction:column; gap:48px; }
 }
 
-/* ── Tablet portrait / large phone ──────────────────────────────────────── */
 @media (max-width: 720px) {
   :root { --shell: min(100% - 34px, 620px); }
   .site-header { min-height: 76px; }.site-header nav { display:none; }.header-action { font-size:.64rem; }
@@ -215,7 +212,6 @@ p { text-wrap: pretty; }
   .contact-section p { font-size:clamp(2.5rem,13vw,4.5rem); }.site-footer { align-items:start; grid-template-columns:1fr; }.site-footer nav { flex-direction:column; gap:12px; }
 }
 
-/* ── Phone ──────────────────────────────────────────────────────────────── */
 @media (max-width: 540px) {
   .header-tools .header-action { display: none; }
   .hero h1 { font-size: clamp(3.4rem, 15vw, 5rem); }
@@ -228,7 +224,6 @@ p { text-wrap: pretty; }
   .site-footer { gap: 28px; }
 }
 
-/* ── Small phone ────────────────────────────────────────────────────────── */
 @media (max-width: 400px) {
   .hero h1 { font-size:clamp(3.25rem,16vw,4.5rem); }
   .portrait-stage { height:420px; width:94%; }

@@ -2,7 +2,7 @@
 
 Every agent changing this site must leave its affected pages more complete than it found them. Make safe, in-scope updates directly rather than merely reporting obvious omissions.
 
-- Before shipping, run `npm run build` and `npm run audit:seo`.
+- Before shipping, run `npm run build`, `npm run audit:seo`, and `npm run audit:a11y` (accessibility tagging: skip links, landmarks, accessible names, labels, heading order).
 - Keep `src/content/site.json` accurate: `siteUrl` must be the production HTTPS custom domain; set `socialImage`, `favicon`, and local-business details before launch.
 - Every indexable page needs one descriptive `h1`, a unique title and description, a canonical URL, and crawlable internal links. Use the shared metadata helpers rather than hand-writing tags.
 - Provide meaningful alt text for informative images. Decorative images must use an empty alt string deliberately.
@@ -23,3 +23,8 @@ Deployment tasks still require a human with provider access: attach the custom d
 - Always use graphify for codebase questions (`graphify query "<q>"` before raw browsing); `graphify update .` after code changes.
 - Long-form docs live in the Obsidian vault (`~/Documents/Obsidian Vault/<project-folder>/`); code keeps a one-line pointer. Extend an existing related note; group docs by feature, never a doc per issue.
 - Never place files directly in `~/developer` or `~/developer/Code`; everything goes inside a project folder.
+
+## Delegation
+
+- Offload simple, self-contained work (searches, file lookups, mechanical edits, single-file checks) to subagents; keep the hard reasoning in the main thread.
+- Run independent work in parallel: batch independent tool calls in one block, and spawn multiple subagents at once instead of sequentially.

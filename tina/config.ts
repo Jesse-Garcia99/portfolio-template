@@ -23,7 +23,6 @@ export default defineConfig({
   },
   schema: {
     collections: [
-      // ── Site settings ──────────────────────────────────────────────────────
       {
         name: "site",
         label: "Site Settings",
@@ -105,7 +104,6 @@ export default defineConfig({
         ],
       },
 
-      // ── Portfolio homepage ─────────────────────────────────────────────────
       {
         name: "home",
         label: "Portfolio Homepage",
@@ -162,7 +160,6 @@ export default defineConfig({
         ]
       },
 
-      // ── Pages ──────────────────────────────────────────────────────────────
       {
         name: "page",
         label: "Pages",
@@ -218,7 +215,6 @@ export default defineConfig({
         ],
       },
 
-      // ── Forms ──────────────────────────────────────────────────────────────
       {
         name: "form",
         label: "Forms",
