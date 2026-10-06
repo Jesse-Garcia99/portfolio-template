@@ -21,7 +21,7 @@ Deployment tasks still require a human with provider access: attach the custom d
 - Comments: follow the code-comment-writer skill (<https://skills.rest/skill/code-comment-writer>). Why over what, minimal, no commented-out code.
 - UI/design work: use design-taste-frontend, gpt-taste, impeccable (<https://www.tasteskill.dev/>).
 - Always use graphify for codebase questions (`graphify query "<q>"` before raw browsing); `graphify update .` after code changes.
-- Long-form docs live in the Obsidian vault (`~/Documents/Obsidian Vault/<project-folder>/`); code keeps a one-line pointer. Extend an existing related note; group docs by feature, never a doc per issue.
+- Long-form docs live in the Obsidian vault (`~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/<project-folder>/`); code keeps a one-line pointer. Extend an existing related note; group docs by feature, never a doc per issue.
 - Never place files directly in `~/developer` or `~/developer/Code`; everything goes inside a project folder.
 
 ## Delegation
